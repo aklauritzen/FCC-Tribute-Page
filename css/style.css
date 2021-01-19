@@ -1,0 +1,205 @@
+
+:root {
+    /* --test-alpha: 0.5; */
+   
+    
+
+}
+body, html {
+    /* important for fullscreen backgroundimage */
+    height: 100%;   
+    background-color: black; 
+    
+    /* Tusch font */
+    font-family: 'Gochi Hand', cursive;
+    font-size: 50px;
+    color: rgba(52, 54, 42, 1)
+}
+
+#bg {
+    /* background image 'clapboard' */
+    background-image:  url("/media/clapboard-background-image.jpg");
+
+    /* full height */
+    height: 100%;
+
+    /* center background image */
+    background-position: center;
+    background-repeat: no-repeat;  
+    
+    /* FIXME: background AND content should scale (cover) 
+    background-size: cover;  
+    */
+    
+    /* centering clapboard-container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main {   
+    position: relative;
+    right: 30px;
+    top: 146px
+}
+
+#movie-number {
+    background-color: rgba(173, 216, 230, var(--test-alpha));
+    grid-area: movie-number;
+    font-size: 80px;
+    width: 90px;    
+
+    position: relative;
+    left: 80px;
+}
+
+#ratings {
+    background-color: rgba(240, 128, 128, var(--test-alpha));
+    grid-area: ratings;
+    font-size: 100px;
+    width: 200px;
+    text-align: center;
+
+    position: relative;
+    left: 175px;
+    bottom: 5px;
+}
+
+#release-date {
+    background-color: rgba(224, 255, 255, var(--test-alpha));
+    grid-area: release-date;
+    font-size: 38px;
+    width: 200px;
+    text-align: center;
+
+    position: relative;
+    top: 25px;
+    right: 10px;
+}
+
+#fps {
+    background-color: rgba(250, 250, 210, var(--test-alpha));
+    grid-area: fps;    
+    width: 70px;
+
+    position: relative;
+    top: -5px;
+    right: 5px;
+}
+
+#duration {
+    background-color: rgba(144, 238, 144, var(--test-alpha));
+    grid-area: duration;    
+    font-family: 'Anton', sans-serif;    
+    font-size: 85px;    
+    color: rgba(247, 59, 87, 0.8);
+    letter-spacing: 4px;
+    width: 450px;
+
+    position: relative;
+    bottom: 40px;
+    left: 50px
+}
+
+/* TODO: Split duration into HH MM SS MS* for positioning */
+
+#camera {
+    background-color: rgba(135, 206, 250, var(--test-alpha));
+    grid-area: camera;    
+
+    position: relative;
+    left: 110px;
+}
+
+#movie-title {
+    background-color: rgba(255, 182, 193, var(--test-alpha));
+    grid-area: movie-title;
+
+    position: relative;
+    bottom: 35px;
+}
+
+#director {
+    background-color: rgba(255, 160, 122, var(--test-alpha));
+    grid-area: director;
+
+    position: relative;
+    bottom: 25px;
+}
+
+#photographer {
+    background-color: rgba(32, 178, 171, var(--test-alpha));
+    grid-area: photographer;
+
+    position: relative;
+    bottom: 25px;
+}
+
+#clapboard-container {    
+    background: rgba(9, 81, 163, var(--test-alpha));    
+    display: grid;   
+    height: 450px;
+    width: 730px;
+    gap: 0px;    
+    grid-template-rows: auto;
+    grid-template-areas:    
+        "movie-number ratings ratings ratings . release-date"
+        "fps duration duration duration duration camera"
+        "movie-title movie-title movie-title movie-title movie-title movie-title"
+        "director director director director director director"
+        "photographer photographer photographer photographer photographer photographer";  
+}
+
+/* Arrow navigation */
+#arrowNavigationRight {
+    background-color: rgba(240, 11, 11, var(--test-alpha));    
+    position: relative;
+
+    /* Positions arrow in the middle of the clapboard */
+    top: 100px;
+}
+
+#arrowNavigationLeft {
+    background-color: rgba(240, 11, 11, var(--test-alpha));    
+    position: relative;
+
+    /* Offsets left arrow to the left from clapboard*/
+    right: 95px;
+
+    /* Positions arrow in the middle of the clapboard */
+    top: 100px;
+}
+
+.arrow {
+    border: solid rgba(000, 000, 000, .5);
+    border-width: 0 20px 20px 0;
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+
+    transition: border-color 250ms linear; /* vendorless fallback */
+    -o-transition: border-color 250ms linear; /* opera */
+    -ms-transition: border-color 250ms linear; /* IE 10 */
+    -moz-transition: border-color 250ms linear; /* Firefox */
+    -webkit-transition: border-color 250ms linear; /*safari and chrome */    
+}
+
+.arrow:hover {
+    border-color: rgba(000, 000, 000, 1);
+
+    transition: border-color 250ms linear; /* vendorless fallback */
+    -o-transition: border-color 250ms linear; /* opera */
+    -ms-transition: border-color 250ms linear; /* IE 10 */
+    -moz-transition: border-color 250ms linear; /* Firefox */
+    -webkit-transition: border-color 250ms linear; /*safari and chrome */    
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);        
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}

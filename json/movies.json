@@ -1,0 +1,114 @@
+{
+    "movies" : [
+        {
+            "movieNumber" : "01",
+            "movieTitle" : "The Shawshank Redemption",
+            "director" : "Frank Darabont",
+            "photographer" : "Roger Deakins",
+            "duration" : "02 22 41 32",
+            "releaseDate" : "09-10-2021",
+            "ratings" : 9.3,
+            "fps" : 24,
+            "camera" : "A"
+        },
+        {
+            "movieNumber" : "02",
+            "movieTitle" : "Godfather",
+            "director" : "Francis Ford Coppola",
+            "photographer" : "Gordon Willis",
+            "duration" : "02 55 24 31",
+            "releaseDate" : "03-29-1972",
+            "ratings" : 9.2,
+            "fps" : 24,
+            "camera" : "B"
+        },
+        {
+            "movieNumber" : "03",
+            "movieTitle" : "The Dark Knight",
+            "director" : "Christopher Nolan",
+            "photographer" : "Wally Pfister",
+            "duration" : "02 32 31 34",
+            "releaseDate" : "07-18-2008",
+            "ratings" : 9.0,
+            "fps" : 24,
+            "camera" : "C"
+        },
+        {
+            "movieNumber" : "04",
+            "movieTitle" : "Schindlers list",
+            "director" : "Steven Spielberg",
+            "photographer" : "Janusz Kaminski",
+            "duration" : "03 15 53 34",
+            "releaseDate" : "11-30-1993",
+            "ratings" : 8.9,
+            "fps" : 24,
+            "camera" : "D"
+        },
+        {
+            "movieNumber" : "05",
+            "movieTitle" : "Fight Club",
+            "director" : "David Fincher",
+            "photographer" : "Jeff Cronenweth",
+            "duration" : "02 19 23 32",
+            "releaseDate" : "09-10-1999",
+            "ratings" : 8.8,
+            "fps" : 24,
+            "camera" : "E"
+        },
+        {
+            "movieNumber" : "06",
+            "movieTitle" : "Forrest Gump",
+            "director" : "Robert Zemeckis",
+            "photographer" : "Gordon Willis",
+            "duration" : "02 22 22 30",
+            "releaseDate" : "06-23-1994",
+            "ratings" : 8.8,
+            "fps" : 24,
+            "camera" : "F"
+        },
+        {
+            "movieNumber" : "07",
+            "movieTitle" : "Inception ",
+            "director" : "Christopher Nolan",
+            "photographer" : "Wally Pfister",
+            "duration" : "02 28 23 31",
+            "releaseDate" : "07-08-2010",
+            "ratings" : 8.8,
+            "fps" : 24,
+            "camera" : "G"
+        },
+        {
+            "movieNumber" : "08",
+            "movieTitle" : "The Matrix",
+            "director" : "The Wachowski Brothers",
+            "photographer" : "Bill Pope",
+            "duration" : "02 16 34 13",
+            "releaseDate" : "03-31-1999",
+            "ratings" : 8.7,
+            "fps" : 24,
+            "camera" : "H"
+        },
+        {
+            "movieNumber" : "09",
+            "movieTitle" : "Goodfellas ",
+            "director" : "Martin Scorsese",
+            "photographer" : "Michael Ballhaus",
+            "duration" : "02 26 43 53",
+            "releaseDate" : "09-19-1990",
+            "ratings" : 8.7,
+            "fps" : 24,
+            "camera" : "I"
+        },
+        {
+            "movieNumber" : "10",
+            "movieTitle" : "One Flew Over the Cuckoo's Nest",
+            "director" : "Milos Forman",
+            "photographer" : "Haskell Wexler",
+            "duration" : "02 13 44 43",
+            "releaseDate" : "11-19-1975",
+            "ratings" : 8.7,
+            "fps" : 24,
+            "camera" : "J"
+        }
+    ]    
+}
