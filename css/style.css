@@ -1,7 +1,8 @@
 
 :root {
-    /* --test-alpha: 0.5; */  
+    /* --test-alpha: 0.5; */     
 }
+
 body, html {
     /* important for fullscreen backgroundimage */
     height: 100%;   
@@ -23,10 +24,6 @@ body, html {
     /* center background image */
     background-position: center;
     background-repeat: no-repeat;  
-    
-    /* FIXME: background AND content should scale (cover) 
-    background-size: cover;  
-    */
     
     /* centering clapboard-container */
     display: flex;
@@ -69,9 +66,10 @@ body, html {
     font-size: 38px;
     width: 200px;
     text-align: center;
+    line-height: 30px;
 
     position: relative;
-    top: 25px;
+    top: 20px;
     right: 10px;
 }
 
@@ -81,7 +79,7 @@ body, html {
     width: 70px;
 
     position: relative;
-    top: -5px;
+    bottom: 12px;
     right: 5px;
 }
 
@@ -97,13 +95,13 @@ body, html {
 }
 
 #duration {
-    background-color: rgba(144, 238, 144, var(--test-alpha));
+    background-color: rgba(236, 94, 111, var(--test-alpha));
     grid-area: duration;  
     
     font-family: 'digital-7_monomono';    
     font-size: 100px;    
     
-    color: rgba(247, 59, 87, 0.8);
+    color: rgba(247, 84, 109, 0.8);
     letter-spacing: 4px;
     width: 450px;
 
@@ -119,26 +117,23 @@ body, html {
 }
 #duration-hh {
     position: relative;
-    left: 10px;
+    left: 14px;
 }
 
 #duration-mm {
     position: relative;
-    left: 50px;
+    left: 53px;
 }
 
 #duration-ss {
     position: relative;
-    left: 90px;
+    left: 94px;
 }
 
 #duration-ms {
     position: relative;
-    left: 130px;
+    left: 135px;
 }
-
-
-/* TODO: Split duration into HH MM SS MS* for positioning */
 
 #camera {
     background-color: rgba(135, 206, 250, var(--test-alpha));
@@ -147,6 +142,7 @@ body, html {
     position: relative;
     text-align: center;
     left: 32px;
+    bottom: 12px;
 }
 
 #movie-title {
@@ -193,8 +189,12 @@ body, html {
     background-color: rgba(240, 11, 11, var(--test-alpha));    
     position: relative;
 
-    /* Positions arrow in the middle of the clapboard */
+    /* Positions arrow horizontal with the clapboard */
     top: 100px;
+
+    animation-name: pulsation;
+    animation-duration: 2s;
+    animation-iteration-count: 3;
 }
 
 #arrow-navigation-left {
@@ -204,7 +204,7 @@ body, html {
     /* Offsets left arrow to the left from clapboard*/
     right: 95px;
 
-    /* Positions arrow in the middle of the clapboard */
+    /* Positions arrow horizontal with the clapboard */
     top: 100px;
 }
 
@@ -219,7 +219,7 @@ body, html {
     -o-transition: border-color 250ms linear; /* opera */
     -ms-transition: border-color 250ms linear; /* IE 10 */
     -moz-transition: border-color 250ms linear; /* Firefox */
-    -webkit-transition: border-color 250ms linear; /*safari and chrome */    
+    -webkit-transition: border-color 250ms linear; /*safari and chrome */   
 }
 
 .arrow:hover {
@@ -240,4 +240,16 @@ body, html {
 .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+}
+
+@keyframes pulsation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

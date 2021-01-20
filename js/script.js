@@ -1,19 +1,8 @@
-
-// First priority
-    // TODO: Spacing between duration digits should be the same distance as in the original picture
-    // TODO: Alpha variarity in letters. Make it more realistic. Subtle.
-    // TODO: Maybe a small random rotation (5-10 deg) on each letter?
-    // https://css-tricks.com/random-numbers-css/
-
-
-// Second priority
-    // TODO: Fullfill the "rules" from the FCC Tribute Page assignment
-    // TODO: "Scene" text on clapboard should be "Ratings"
-    // TODO: Text scaling when long text
-    // TODO: Make a draw function for tusch font
-    // TODO: Fade from black to screen on intro (Movie effect)
-    // TODO: Test on Mobile Devices
-    // TODO: Make a seperate page for Accessibility?
+// TODO: Fullfill the "rules" from the FCC Tribute Page assignment    
+// TODO: Text scaling when long text
+// TODO: Make a draw function for tusch font    
+// TODO: Test on Mobile Devices
+// TODO: Make a seperate page for Accessibility?
 
 function init() {
     getData(); 
@@ -22,14 +11,11 @@ function init() {
     window.addEventListener("keydown", function (event) {
         switch (event.key) {
             case "Right":  // IE/Edge has specific value
-            case "ArrowRight": 
-                // TODO: Fadeanimation on right arrow    
-                // https://css-tricks.com/controlling-css-animations-transitions-javascript/       
+            case "ArrowRight":                   
                 updateClapboard("forward")
                 break;
             case "Left": // IE/Edge has specific value
-            case "ArrowLeft":
-                // TODO: Fadeanimation on left arrow           
+            case "ArrowLeft":                
                 updateClapboard("backward")
                 break;
             default:
@@ -114,24 +100,26 @@ function updateClapboard(direction) {
     numberAnimation("duration-mm", mins, 500, 100); 
     numberAnimation("duration-ss", secs, 1000, 75); 
     numberAnimation("duration-ms", millisecs, 1500, 75); 
-        
+    
+    numberAnimation("fps", moviesObj['movies'][clapboardIndex]['fps'], 0, 100);    
+    
     document.getElementById("movie-number").innerHTML = moviesObj['movies'][clapboardIndex]['movieNumber'];
-    document.getElementById("ratings").innerHTML = moviesObj['movies'][clapboardIndex]['ratings'];
-    document.getElementById("release-date").innerHTML = moviesObj['movies'][clapboardIndex]['releaseDate'];    
+    document.getElementById("ratings").innerHTML = moviesObj['movies'][clapboardIndex]['ratings'];    
     document.getElementById("movie-title").innerHTML = moviesObj['movies'][clapboardIndex]['movieTitle'];
     document.getElementById("director").innerHTML = moviesObj['movies'][clapboardIndex]['director'];
     document.getElementById("photographer").innerHTML = moviesObj['movies'][clapboardIndex]['photographer'];
     document.getElementById("camera").innerHTML = moviesObj['movies'][clapboardIndex]['camera'];
 
-    numberAnimation("fps", moviesObj['movies'][clapboardIndex]['fps'], 0, 100);    
+    // Makes release date multiline
+    const releaseDate = moviesObj['movies'][clapboardIndex]['releaseDate'].split("-");    
+    document.getElementById("release-date").innerHTML = releaseDate[0] + "-" + releaseDate[1] + "<br>" + releaseDate[2];    
 }
 
 function numberAnimation(elementId, num, delay, animationDuration) {
 
     setTimeout(function() {
         for(let i = 0; i < num; i++) {
-            setTimeout(function() {
-                //document.getElementById(elementId).innerHTML = (i + 1);// + timeVal;            
+            setTimeout(function() {                
                 document.getElementById(elementId).innerHTML = (i < 9) ? "0" + (i + 1) : (i + 1);// + timeVal;            
             }, animationDuration * i / 4)        
         }
