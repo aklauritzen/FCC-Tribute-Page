@@ -1,5 +1,7 @@
 # Clapboard
 
+Live project link: https://aklauritzen.github.io/clapboard/
+
 Personal project to test out HTML5, CSS, JSON, and JavaScript features.
 
 Using the clapboard changes between different movies. The data is retrieved from JSON through JavaScript.
