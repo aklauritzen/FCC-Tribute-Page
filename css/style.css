@@ -18,7 +18,7 @@ body, html {
 
 #bg {
     /* Background image 'clapboard' */
-    background-image:  url("../media/clapboard-background-image.jpg");
+    background-image:  url("/media/clapboard-background-image.jpg");
 
     /* Full height */
     height: 100%;
@@ -84,8 +84,8 @@ body, html {
 /* Custom font for digits (duration). Created by: http://www.styleseven.com/*/
 @font-face {
     font-family: 'digital-7_monomono';
-    src: url('../font/digital-7.mono-webfont.woff2') format('woff2'),
-         url('../font/digital-7.mono-webfont.woff') format('woff');
+    src: url('/font/digital-7.mono-webfont.woff2') format('woff2'),
+         url('/font/digital-7.mono-webfont.woff') format('woff');
     font-weight: 900;    
 }
 
