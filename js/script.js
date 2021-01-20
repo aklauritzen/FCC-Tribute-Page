@@ -1,9 +1,3 @@
-// TODO: Fullfill the "rules" from the FCC Tribute Page assignment    
-// TODO: Text scaling when long text
-// TODO: Make a draw function for tusch font    
-// TODO: Test on Mobile Devices
-// TODO: Make a seperate page for Accessibility?
-// TODO: Paralax effect?
 
 function init() {
     getData(); 
