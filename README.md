@@ -1,3 +1,3 @@
-# Tribute-Page
+# The Clap Board
 
-Free Code Camp project.
+Personal project to test out HTML5, CSS, JSON and JavaScript features.
