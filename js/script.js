@@ -3,6 +3,7 @@
 // TODO: Make a draw function for tusch font    
 // TODO: Test on Mobile Devices
 // TODO: Make a seperate page for Accessibility?
+// TODO: Paralax effect?
 
 function init() {
     getData(); 
@@ -105,7 +106,7 @@ function updateClapboard(direction) {
     
     document.getElementById("movie-number").innerHTML = moviesObj['movies'][clapboardIndex]['movieNumber'];
     document.getElementById("ratings").innerHTML = moviesObj['movies'][clapboardIndex]['ratings'];    
-    document.getElementById("movie-title").innerHTML = moviesObj['movies'][clapboardIndex]['movieTitle'];
+    document.getElementById("title").innerHTML = moviesObj['movies'][clapboardIndex]['movieTitle'];
     document.getElementById("director").innerHTML = moviesObj['movies'][clapboardIndex]['director'];
     document.getElementById("photographer").innerHTML = moviesObj['movies'][clapboardIndex]['photographer'];
     document.getElementById("camera").innerHTML = moviesObj['movies'][clapboardIndex]['camera'];
