@@ -6,11 +6,11 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">         
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Gochi+Hand&display=swap" rel="stylesheet">
         <script src="js/script.js"></script>
-    </head><nav id="arrowNavigationLeft">
-            <p><i id="leftArrow" class="arrow left"></i></p>                
-        </nav>
+    </head>
     <body id="bg">
-        
+        <nav id="arrow-navigation-left">
+            <p><i id="leftArrow" class="arrow left"></i></p>                
+        </nav>        
         <main id="main">
             <div id="clapboard-container">
                 <div id="movie-number">movie-number</div>
@@ -18,7 +18,12 @@
                 <div id="release-date">release-date</div>
 
                 <div id="fps">fps</div>
-                <div id="duration">duration</div>
+                <div id="duration">
+                    <div id="duration-hh"></div>
+                    <div id="duration-mm"></div>
+                    <div id="duration-ss"></div>
+                    <div id="duration-ms"></div>
+                </div>
                 <div id="camera">camera</div>
 
                 <div id="movie-title">movie-title</div>
@@ -28,7 +33,7 @@
             
         </main>
 
-        <nav id="arrowNavigationRight">
+        <nav id="arrow-navigation-right">
             <p><i id="rightArrow" class="arrow right"></i></p>                
         </nav>
     </body>

@@ -1,3 +1,20 @@
+
+// First priority
+    // TODO: Spacing between duration digits should be the same distance as in the original picture
+    // TODO: Alpha variarity in letters. Make it more realistic. Subtle.
+    // TODO: Maybe a small random rotation (5-10 deg) on each letter?
+    // https://css-tricks.com/random-numbers-css/
+
+
+// Second priority
+    // TODO: Fullfill the "rules" from the FCC Tribute Page assignment
+    // TODO: "Scene" text on clapboard should be "Ratings"
+    // TODO: Text scaling when long text
+    // TODO: Make a draw function for tusch font
+    // TODO: Fade from black to screen on intro (Movie effect)
+    // TODO: Test on Mobile Devices
+    // TODO: Make a seperate page for Accessibility?
+
 function init() {
     getData(); 
     
@@ -58,13 +75,18 @@ function getData() {
 }
 
 
-
 let clapboardIndex = 0;
 function updateClapboard(direction) {        
     
     // Update clapboard with initial value of 0
     if(direction == "initial") {
         clapboardIndex = 0;
+
+        // Init numbers
+        document.getElementById("duration-hh").innerHTML = "00";
+        document.getElementById("duration-mm").innerHTML = "00";
+        document.getElementById("duration-ss").innerHTML = "00";
+        document.getElementById("duration-ms").innerHTML = "00";
     } else if(direction == "forward") { // Right arrow
         clapboardIndex++;
 
@@ -80,44 +102,40 @@ function updateClapboard(direction) {
             clapboardIndex = moviesObj['movies'].length - 1;
         }
     }    
-
-    // TODO: Make a count function for time ( External function reused for all counting?)
-    // Det kunne være en funktion som modtog "elementName" hvor den ved hvilket
-    // element den skal opdatere. Derudover modtager den en rækkefølge, som den skal 
-    // opdatere ud fra, samt et parameter med hvor lang tid den skal tage om at tælle !
-
+    
     // Splits "duration" into "02" "55" "24" "31"
     const duration = moviesObj['movies'][clapboardIndex]['duration'].split(" ")
     const hours = duration[0];
     const mins = duration[1];
     const secs = duration[2];
-    const millisecs = duration[4];
-    
+    const millisecs = duration[3];
+
+    numberAnimation("duration-hh", hours, 0, 700); 
+    numberAnimation("duration-mm", mins, 500, 100); 
+    numberAnimation("duration-ss", secs, 1000, 75); 
+    numberAnimation("duration-ms", millisecs, 1500, 75); 
+        
     document.getElementById("movie-number").innerHTML = moviesObj['movies'][clapboardIndex]['movieNumber'];
     document.getElementById("ratings").innerHTML = moviesObj['movies'][clapboardIndex]['ratings'];
-    document.getElementById("release-date").innerHTML = moviesObj['movies'][clapboardIndex]['releaseDate'];
-    document.getElementById("fps").innerHTML = moviesObj['movies'][clapboardIndex]['fps'];
-    document.getElementById("duration").innerHTML = moviesObj['movies'][clapboardIndex]['duration'];
+    document.getElementById("release-date").innerHTML = moviesObj['movies'][clapboardIndex]['releaseDate'];    
     document.getElementById("movie-title").innerHTML = moviesObj['movies'][clapboardIndex]['movieTitle'];
     document.getElementById("director").innerHTML = moviesObj['movies'][clapboardIndex]['director'];
     document.getElementById("photographer").innerHTML = moviesObj['movies'][clapboardIndex]['photographer'];
     document.getElementById("camera").innerHTML = moviesObj['movies'][clapboardIndex]['camera'];
 
-    numberAnimation("fps", moviesObj['movies'][clapboardIndex]['fps']);    
+    numberAnimation("fps", moviesObj['movies'][clapboardIndex]['fps'], 0, 100);    
 }
 
-function numberAnimation(elementId, num) {
-    for(let i = 0; i < num; i++) {
-        setTimeout(function() {
-            document.getElementById(elementId).innerHTML = i + 1;            
-        }, 20 * i)        
-    }
+function numberAnimation(elementId, num, delay, animationDuration) {
+
+    setTimeout(function() {
+        for(let i = 0; i < num; i++) {
+            setTimeout(function() {
+                //document.getElementById(elementId).innerHTML = (i + 1);// + timeVal;            
+                document.getElementById(elementId).innerHTML = (i < 9) ? "0" + (i + 1) : (i + 1);// + timeVal;            
+            }, animationDuration * i / 4)        
+        }
+    }, delay)    
 }
 
-
-// TODO: Text scaling when long text
-// TODO: Make a draw function for tusch font
-// TODO: Fade from black to screen on intro (Movie effect)
-// TODO: Alpha variarity in letters. Make it more realistic. Subtle.
-// TODO: Maybe a small random rotation (5-10 deg) on each letter?
 document.addEventListener("DOMContentLoaded", init, false);

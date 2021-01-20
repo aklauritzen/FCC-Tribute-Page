@@ -1,9 +1,6 @@
 
 :root {
-    /* --test-alpha: 0.5; */
-   
-    
-
+    /* --test-alpha: 0.5; */  
 }
 body, html {
     /* important for fullscreen backgroundimage */
@@ -13,12 +10,12 @@ body, html {
     /* Tusch font */
     font-family: 'Gochi Hand', cursive;
     font-size: 50px;
-    color: rgba(52, 54, 42, 1)
+    color: rgba(22, 22, 22, 0.9)
 }
 
 #bg {
     /* background image 'clapboard' */
-    background-image:  url("/media/clapboard-background-image.jpg");
+    background-image:  url("../media/clapboard-background-image.jpg");
 
     /* full height */
     height: 100%;
@@ -50,6 +47,7 @@ body, html {
     width: 90px;    
 
     position: relative;
+    top: 10px;
     left: 80px;
 }
 
@@ -87,19 +85,58 @@ body, html {
     right: 5px;
 }
 
+
+
+@font-face {
+    font-family: 'digital-7_monomono';
+    src: url('../font/digital-7.mono-webfont.woff2') format('woff2'),
+         url('../font/digital-7.mono-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
 #duration {
     background-color: rgba(144, 238, 144, var(--test-alpha));
-    grid-area: duration;    
-    font-family: 'Anton', sans-serif;    
-    font-size: 85px;    
+    grid-area: duration;  
+    
+    font-family: 'digital-7_monomono';    
+    font-size: 100px;    
+    
     color: rgba(247, 59, 87, 0.8);
     letter-spacing: 4px;
     width: 450px;
 
     position: relative;
-    bottom: 40px;
-    left: 50px
+    bottom: 30px;
+    right: 14px;
+    
 }
+
+#duration-hh, #duration-mm, #duration-ss, #duration-ms  {
+    float: left;
+    letter-spacing: 5px;
+}
+#duration-hh {
+    position: relative;
+    left: 10px;
+}
+
+#duration-mm {
+    position: relative;
+    left: 50px;
+}
+
+#duration-ss {
+    position: relative;
+    left: 90px;
+}
+
+#duration-ms {
+    position: relative;
+    left: 130px;
+}
+
 
 /* TODO: Split duration into HH MM SS MS* for positioning */
 
@@ -108,7 +145,8 @@ body, html {
     grid-area: camera;    
 
     position: relative;
-    left: 110px;
+    text-align: center;
+    left: 32px;
 }
 
 #movie-title {
@@ -116,7 +154,7 @@ body, html {
     grid-area: movie-title;
 
     position: relative;
-    bottom: 35px;
+    bottom: 30px;
 }
 
 #director {
@@ -124,7 +162,7 @@ body, html {
     grid-area: director;
 
     position: relative;
-    bottom: 25px;
+    bottom: 22px;
 }
 
 #photographer {
@@ -132,7 +170,7 @@ body, html {
     grid-area: photographer;
 
     position: relative;
-    bottom: 25px;
+    bottom: 20px;
 }
 
 #clapboard-container {    
@@ -151,7 +189,7 @@ body, html {
 }
 
 /* Arrow navigation */
-#arrowNavigationRight {
+#arrow-navigation-right {
     background-color: rgba(240, 11, 11, var(--test-alpha));    
     position: relative;
 
@@ -159,7 +197,7 @@ body, html {
     top: 100px;
 }
 
-#arrowNavigationLeft {
+#arrow-navigation-left {
     background-color: rgba(240, 11, 11, var(--test-alpha));    
     position: relative;
 
