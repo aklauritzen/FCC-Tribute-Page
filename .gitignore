@@ -1,8 +1,2 @@
-# ignore a single file
-workspace.code-workspace
-
-# ignore an entire directory
-/.vscode/
-
-# ignore a file type
-*.psd
+/workspace.code-workspace
+/.vscode
