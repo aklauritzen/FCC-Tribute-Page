@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'digital-7_monomono';
-    src: url('digital-7.mono-webfont.woff2') format('woff2'),
-         url('digital-7.mono-webfont.woff') format('woff');
+    src: url('/font/digital-7.mono-webfont.woff2') format('woff2'),
+         url('/font/digital-7.mono-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
