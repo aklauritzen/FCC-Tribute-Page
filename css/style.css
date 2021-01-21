@@ -109,6 +109,13 @@ body, html {
     right: 14px;    
 }
 
+/* Duration position needs to be 8px higher on Mozilla Firefox */
+@-moz-document url-prefix() {
+    #duration {
+        bottom: 38px;
+    }
+  }
+
 #duration-hh, #duration-mm, #duration-ss, #duration-ms  {
     float: left;
     letter-spacing: 5px;
