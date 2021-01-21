@@ -1,6 +1,6 @@
 # Clapboard
 
-Live project link: https://aklauritzen.github.io/clapboard/
+Live project link: https://clapboard-aklauritzen.netlify.app/
 
 Personal project to test out HTML5, CSS, JSON, and JavaScript features.
 
