@@ -23,6 +23,10 @@ body, html {
     color: rgba(22, 22, 22, 0.9);
 }
 
+html {
+    background-color: transparent;
+}
+
 #bg {
     /* Background image 'clapboard' */
     background-image: url('/media/clapboard-background-image.jpg');
