@@ -4,6 +4,13 @@
     /* --test-alpha: 0.5; */     
 }
 
+/* Resets CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body, html {
     /* Important for fullscreen backgroundimage */
     height: 100%;   
