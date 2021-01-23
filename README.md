@@ -1,6 +1,6 @@
 # Clapboard
 
-Live project: https://clapboard-aklauritzen.netlify.app/
+Live demo: https://clapboard-aklauritzen.netlify.app/
 
 Personal project to play around with HTML5, CSS, JSON, and JavaScript features.
 
